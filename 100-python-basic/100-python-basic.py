@@ -54,4 +54,12 @@ print(a[-2])  # 3
 a[3] = 5
 print(a)  # [1, 2, 3, 5]
 
+# 슬라이싱
+print(a[1:3])  # [2, 3]
+print(a[:-1])  # [1, 2, 3]
+print(a[1:-1])  # [2, 3]
+
+# 리스트 컴프리헨션 (list comprehension)
+print("===========")
+
 
