@@ -200,3 +200,73 @@ print(a)
 # 삭제
 a.remove(3)  # {1, 2, 4, 5, 6}
 print(a)
+
+# 조건문
+# if con:
+# elif con:
+# else:
+
+var = 1 in [1, 2, 3]  # True
+print("===========")
+print(var)
+
+var = 4 not in [1, 2, 3]  # True
+print(var)
+
+
+# 반복문
+# while
+# while con:
+
+# for
+# for var in list:
+
+# 함수
+def add(a, b):
+    return a + b
+
+
+result = add(1, 2)
+print("===========")
+print(result)
+
+# lambda
+add = lambda a, b: a + b
+result = add(1, 2)
+print(result)
+
+# 입출력
+# 개수
+# n = int(input())
+# n = int(input("입력해주세요. >>> "))
+
+# 데이터
+# data = list(map(int, input().split()))
+print(f"data: {data}")
+
+# readline 사용 시
+import sys
+
+# data = sys.stdin.readline().rstrip()
+print(f"data2: {data}")
+
+# 주요 라이브러리
+# 내장함수
+
+# 합
+result = sum([1, 2, 3])
+print("===========")
+print(result)
+
+# 최소값, 최대값
+print(min(1, 2, 3))  # 1
+print(max(1, 2, 3))  # 3
+
+# 문자열 > 수식
+print(eval("3 + 5"))  # 8
+
+# key 정렬
+result = sorted([('디', 5), ('비', 1), ('씨', 3)], key=lambda x: x[0])
+print("===========")
+print(result)
+
