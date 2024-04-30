@@ -1,4 +1,6 @@
 # 정수형
+import heapq
+
 print("===========")
 a = 1
 b = 2
@@ -266,7 +268,78 @@ print(max(1, 2, 3))  # 3
 print(eval("3 + 5"))  # 8
 
 # key 정렬
-result = sorted([('디', 5), ('비', 1), ('씨', 3)], key=lambda x: x[0])
+# result = sorted([('디', 5), ('비', 1), ('씨', 3)], key=lambda x: x[0])
+result = sorted([('디', 5), ('비', 1), ('씨', 3)], key=lambda x: x[1])
 print("===========")
 print(result)
+
+# itertools - 순열, 조합
+# 순열
+from itertools import permutations
+
+a = ['A', 'B', 'C']
+res = list(permutations(a, 3))
+print("===========")
+print(res)
+# [('A', 'B', 'C'), ('A', 'C', 'B'), ('B', 'A', 'C'), ('B', 'C', 'A'), ('C', 'A', 'B'), ('C', 'B', 'A')]
+
+# 조합
+from itertools import combinations
+
+a = ['A', 'B', 'C']
+res = list(combinations(a, 2))
+print("===========")
+print(res)
+# [('A', 'B'), ('A', 'C'), ('B', 'C')]
+
+# 중복순열
+from itertools import product
+
+a = ['A', 'B', 'C']
+res = list(product(a, repeat=2))
+print("===========")
+print(res)
+# [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'B'), ('B', 'C'), ('C', 'A'), ('C', 'B'), ('C', 'C')]
+
+# 중복조합
+from itertools import combinations_with_replacement
+
+a = ['A', 'B', 'C']
+res = list(combinations_with_replacement(a, 2))
+print(res)
+# [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
+
+
+# heapq - 힙, 우선순위류
+# 파이썬의 힙은 최소힙으로 구성되어 있어서, 원소 전체를 힙에 넣었다 빼는 것만으로 오름차순 정렬이 완료됨 - O(NlogN)
+
+# 추가
+# heapq.heappush()
+
+# 제거
+# heapq.heappop()
+
+# 정렬
+import heapq
+
+
+def heapsort(iterable):
+    h = []
+    res = []
+
+    for value in iterable:
+        # heapq.heappush(h, value)  # 내림차순 : (h, -value)
+        heapq.heappush(h, -value)  # 내림차순 : (h, -value)
+
+    for i in range(len(h)):
+        # res.append(heapq.heappop(h))  # 내림차순 : (-heapq.heappop(h))
+        res.append(-heapq.heappop(h))  # 내림차순 : (-heapq.heappop(h))
+
+    return res
+
+
+res = heapsort([1, 3, 5, 7, 9, 2, 4, 6])
+print("===========")
+print(res)
+
 
