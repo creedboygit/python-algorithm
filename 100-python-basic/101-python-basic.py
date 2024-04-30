@@ -36,3 +36,34 @@ a = [[0] * m for _ in range(n)]
 print(a)
 
 # 리스트 메소드
+# a = list()
+a = [1, 2, 3, 4, 5]
+a.sort()  # 오름차순 정렬
+a.sort(reverse=True)  # 내림차순 정렬
+a.reverse()  # 원소의 순서를 뒤집음
+a.insert(2, 3)  # 인덱스 2에 원소 3을 삽입
+a.remove(2)  # 값이 1인 원소를 제거. 원소가 여러 개면 한 개만 제거
+
+# 인덱스로 제거
+del a[1]
+print("===========")
+print(a)
+a.pop(2)
+print(a)
+
+
+# insert 함수의 시간 복잡도는 O(N)_이므로, 남발하면 시간 초과날 수 있다.
+# 특정 값의 원소를 모두 제거하려면 remove_set = {3, 5} 에 제거할 원소를 넣은 후
+# result = [i for i in a if i not in remove_set] 으로 처리
+
+a = [1, 2, 3, 3, 1, 2, 4, 5]
+print("===========")
+print(a)
+
+# 삭제할 원소 집합 생성
+remove_set = {1, 3}
+
+# 리스트 컴프리센션 활용: 삭제할 원소 집합 데이터와 하나하나 비교
+a_new = [i for i in a if i not in remove_set]
+print("===========")
+print(a_new)
