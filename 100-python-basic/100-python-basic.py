@@ -342,4 +342,37 @@ res = heapsort([1, 3, 5, 7, 9, 2, 4, 6])
 print("===========")
 print(res)
 
+# bisect - 이진 탐색
+# 이진탐색 - 정렬된 배열에서 효과적으로 사용 가능
+# 배열 a에서 각각 왼쪽과 오른쪽에서 삽입할 원소 x의 인덱스를 찾는 함수
+# bisect_left(a, x)
+# bisect_right(a, x)
 
+# collections - 덱, 카운터
+# 덱(deque) - 인덱싱, 슬라이싱 불가능 / 데이터의 시작과 끝 부분 데이터 추가 / 삭제가 용이
+
+from collections import deque
+
+data = deque([2, 3, 4])
+data.appendleft(1)
+data.append(5)
+
+print("===========")
+print(list(data))  # deque([1, 2, 3, 4, 5])
+
+# 카운터(counter) - 개수
+from collections import Counter
+
+counter = Counter(['red', 'blue', 'red', 'green', 'blue'])
+print("===========")
+print(counter['blue'])  # 2
+print(dict(counter))  # {'red': 2, 'blue': 2, 'green': 1}
+print(counter)
+
+# math - 팩토리얼, 제곱근, gcd, 삼각함수, 수학 상수
+import math
+
+print("===========")
+print(math.factorial(5))  # 120
+print(math.sqrt(4))  # 2.0
+print(math.gcd(25, 15))  # 5
