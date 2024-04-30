@@ -67,3 +67,42 @@ remove_set = {1, 3}
 a_new = [i for i in a if i not in remove_set]
 print("===========")
 print(a_new)
+
+# 문자열 연산
+a = "Hello"
+b = "World"
+
+result = a + b
+print(result)
+
+result = a + "_" + b
+print(result)
+
+# 슬라이싱
+result = a[2:]
+print(result)
+
+# 딕셔너리(사전)
+price = dict()
+price['사과'] = 9000
+price['바나나'] = 7000
+price['포도'] = 12000
+
+print("===========")
+print(price)
+
+key_list = price.keys()
+print(list(key_list))
+
+value_list = price.values()
+print(list(value_list))
+
+if '사과' in price: # 사전 자료형에 특정한 원소가 있는지 검사 가능
+    print("'사과'가 존재합니다.")
+
+if '풋사과' in price: # 사전 자료형에 특정한 원소가 있는지 검사 가능
+    print("'풋사과'가 존재합니다.")
+else:
+    print("'풋사과'가 존재하지 않습니다.")
+
+
