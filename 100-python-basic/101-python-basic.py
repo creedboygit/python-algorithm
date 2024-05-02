@@ -139,3 +139,6 @@ def func():
 
 
 print(func())
+
+# 람다
+
