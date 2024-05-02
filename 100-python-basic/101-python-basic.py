@@ -152,10 +152,20 @@ print((lambda a, b: a + b)(3, 7))  # 10
 
 # 만약 리스트가 아닌 각각의 변수에 저장하고 싶을 때
 # n, m, k = map(int, input().split())
-n, m, k = input().split()
-print("===========")
-print(n)
-print(m)
-print(k)
+# n, m, k = input().split()
+# print("===========")
+# print(n)
+# print(m)
+# print(k)
 
 # 시간 초과 문제로 입력을 최대한 빠르게 받아야 할 때 sys.stdin.readline() 을 이용
+import sys
+
+# a = sys.stdin.readline().rstrip()  # rstrip()은 맨 오른쪽의 줄바꿈 기호로 입력되는 엔터를 제거해주는 함수
+# print(a)
+
+# a, b, c = sys.stdin.readline().rstrip().split()  # rstrip()은 맨 오른쪽의 줄바꿈 기호로 입력되는 엔터를 제거해주는 함수
+# print(a)
+# print(b)
+# print(c)
+
