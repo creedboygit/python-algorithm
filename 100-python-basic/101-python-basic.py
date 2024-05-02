@@ -129,13 +129,13 @@ print(data)
 # a - b # 차집합
 
 # global
-cc = 3
+aa = 3
 
 
 def func():
-    global cc
-    cc += 1
-    return cc
+    global aa
+    aa += 1
+    return aa
 
 
 print(func())
