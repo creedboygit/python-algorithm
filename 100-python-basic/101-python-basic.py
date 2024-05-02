@@ -143,3 +143,19 @@ print(func())
 # 람다
 print((lambda a, b: a + b)(3, 7))  # 10
 
+# 입출력
+# input()은 한 줄의 문자열을 입력받을 수 있다.
+# 여러 개의 정수 데이터를 입력받을 때는 list(map(int, input().split()))을 이용
+# a = list(map(int, input().split()))
+# print("===========")
+# print(a)
+
+# 만약 리스트가 아닌 각각의 변수에 저장하고 싶을 때
+# n, m, k = map(int, input().split())
+n, m, k = input().split()
+print("===========")
+print(n)
+print(m)
+print(k)
+
+# 시간 초과 문제로 입력을 최대한 빠르게 받아야 할 때 sys.stdin.readline() 을 이용
