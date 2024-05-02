@@ -141,4 +141,5 @@ def func():
 print(func())
 
 # 람다
+print((lambda a, b: a + b)(3, 7))
 
