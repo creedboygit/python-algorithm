@@ -128,4 +128,14 @@ print(data)
 # a & b # 교집합
 # a - b # 차집합
 
+# global
+cc = 3
 
+
+def func():
+    global cc
+    cc += 1
+    return cc
+
+
+print(func())
