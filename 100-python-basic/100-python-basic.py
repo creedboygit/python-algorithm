@@ -376,3 +376,13 @@ print("===========")
 print(math.factorial(5))  # 120
 print(math.sqrt(4))  # 2.0
 print(math.gcd(25, 15))  # 5
+
+# f-string
+answer = 7
+print("===========")
+print(f"정답은 {answer} 입니다.")
+
+a = [1, 2, 3, 4, 5]
+print("===========")
+print(a)
+print(*a, sep=" / ")
