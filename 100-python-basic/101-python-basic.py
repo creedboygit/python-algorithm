@@ -169,3 +169,13 @@ import sys
 # print(b)
 # print(c)
 
+# f-string
+answer = 7
+print("===========")
+print(f"정답은 {answer}입니다.")
+
+a = [1, 2, 3, 4, 5]
+print("===========")
+print(*a)
+
+
