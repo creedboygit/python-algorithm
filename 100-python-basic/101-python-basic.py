@@ -257,3 +257,47 @@ print("===========")
 data = list(map(int, data))
 print(f"data: {data}")
 print(heapsort_max(data))
+
+
+# bisect: 이진 탐색 기능을 제공하는 라이브러리
+# 정렬된 배열에서 특정 원소를 찾아야할 경우 효과적
+# bisect_left(a, x)  # 정렬된 순서를 유지하면서 리스트 a에 데이터 x를 삽입할 가장 왼쪽 인덱스
+# bisect_right(a, x)  # 정렬된 순서를 유지하면서 리스트 a에 데이터 x를 삽입할 가장 오른쪽 인덱스
+
+from bisect import bisect_left, bisect_right
+
+a = [1, 2, 3, 3, 3, 4, 5]
+bisect_left(a, 2)  # 1
+bisect_right(a, 2)  # 2
+
+# 이 두 함수는 정렬된 리스트에서 값이 특정 범위에 속하는 원소의 개수를 구하고자 할 때, 효과적으로 사용할 수 있다.
+# 만약 2 이상 4 이하인 원소의 개수를 구하고 싶다면 다음과 같이 구할 수 있다.
+
+a = [1, 2, 3, 3, 3, 4, 5]
+result = bisect_right(a, 4) - bisect_left(a, 2)  # 6 - 1 = 5
+print("===========")
+print(f"2 이상 4 이하인 원소의 개수는 {result}개입니다.")
+
+
+# collections: 덱, 카운터 등의 자료구조를 포함하는 라이브러리
+from collections import deque
+data = deque([2, 3, 4])
+data.appendleft(1)
+data.append(5)
+print("===========")
+print(data)
+print(data.popleft())
+print(data.pop())
+
+# Counter는 등장 횟수를 세는 기능을 제공
+# 원소별 등장 횟수를 세는 기능이 필요할 때 구현 가능
+from collections import Counter
+
+counter = Counter(['red', 'red', 'blue'])
+print("===========")
+print(counter)
+print(counter['red'])
+
+
+
+
