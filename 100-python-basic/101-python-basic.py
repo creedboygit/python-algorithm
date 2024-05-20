@@ -221,11 +221,11 @@ result = list(combinations_with_replacement(data, 2))  # 중복 허용 조합
 print("===========")
 print(result)
 
-
 # 힙 기능을 제공하는 라이브러리로, 우선순위 큐 기능을 구현하기 위해 사용한다.
 # 파이썬에서는 최소 힙을 제공하므로, 단순히 원소를 힙에 넣었다가 빼는 것만으로 오름차순 정렬이 완료된다.
 # (최상단 원소는 항상 가장 작은 원소이므로)
 import heapq
+
 
 def heapsort(iterable):
     h = []
@@ -240,6 +240,7 @@ def heapsort(iterable):
 data = ['3', '2', '5', '4', '3', '7']
 print("===========")
 print(heapsort(data))
+
 
 ### 최대힙 구현
 # 최대 힙을 구현하는 방법은 원소의 부호를 바꾸어 힙에 삽입했다가, 원소를 꺼낸 뒤 다시 원소의 부호를 바꾸는 것이다.
@@ -257,7 +258,6 @@ print("===========")
 data = list(map(int, data))
 print(f"data: {data}")
 print(heapsort_max(data))
-
 
 # bisect: 이진 탐색 기능을 제공하는 라이브러리
 # 정렬된 배열에서 특정 원소를 찾아야할 경우 효과적
@@ -278,9 +278,9 @@ result = bisect_right(a, 4) - bisect_left(a, 2)  # 6 - 1 = 5
 print("===========")
 print(f"2 이상 4 이하인 원소의 개수는 {result}개입니다.")
 
-
 # collections: 덱, 카운터 등의 자료구조를 포함하는 라이브러리
 from collections import deque
+
 data = deque([2, 3, 4])
 data.appendleft(1)
 data.append(5)
@@ -297,6 +297,14 @@ counter = Counter(['red', 'red', 'blue'])
 print(counter)
 print(counter['red'])
 
+# math
+import math
 
+math.factorial(5)  # 5!
+math.sqrt(7)  # 루트 7
+math.gcd(21, 14)  # 최대 공약수
 
-
+p = math.pi  # 파이 상수
+e = math.e  # 자연 상수
+print("===========")
+print(e)
