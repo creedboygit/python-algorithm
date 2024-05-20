@@ -210,11 +210,50 @@ print("===========")
 print(result)
 
 from itertools import product
+
 result = list(product(data, repeat=3))  # 중복 허용 순열 (2개를 뽑는)
 print("===========")
 print(result)
 
 from itertools import combinations_with_replacement
+
 result = list(combinations_with_replacement(data, 2))  # 중복 허용 조합
 print("===========")
 print(result)
+
+
+# 힙 기능을 제공하는 라이브러리로, 우선순위 큐 기능을 구현하기 위해 사용한다.
+# 파이썬에서는 최소 힙을 제공하므로, 단순히 원소를 힙에 넣었다가 빼는 것만으로 오름차순 정렬이 완료된다.
+# (최상단 원소는 항상 가장 작은 원소이므로)
+import heapq
+
+def heapsort(iterable):
+    h = []
+    results = []
+    for value in iterable:
+        heapq.heappush(h, value)  # 원소를 차례로 힙에 삽입
+    for _ in range(len(h)):
+        results.append(heapq.heappop(h))  # 원소를 차례로 꺼내어 result에 담음
+    return results
+
+
+data = ['3', '2', '5', '4', '3', '7']
+print("===========")
+print(heapsort(data))
+
+### 최대힙 구현
+# 최대 힙을 구현하는 방법은 원소의 부호를 바꾸어 힙에 삽입했다가, 원소를 꺼낸 뒤 다시 원소의 부호를 바꾸는 것이다.
+def heapsort_max(iterable):
+    h = []
+    results = []
+    for value in iterable:
+        heapq.heappush(h, -value)
+    for _ in range(len(h)):
+        results.append(-heapq.heappop(h))
+    return results
+
+
+print("===========")
+data = list(map(int, data))
+print(f"data: {data}")
+print(heapsort_max(data))
