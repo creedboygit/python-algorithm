@@ -178,4 +178,43 @@ a = [1, 2, 3, 4, 5]
 print("===========")
 print(*a)
 
+# 파이썬 주요 라이브러리
+# 내장 함수
 
+result = min(76, 5, 4, 3)
+print("===========")
+print(result)
+
+result = max(4, 5, 1, 3)
+print(result)
+
+result = sum([1, 2, 3, 4, 5])
+print(result)
+
+result = eval("(3 + 5) * 7")  # 수학 수식이 문자열 형식으로 들어오면 계산 결과를 반환
+print(result)
+
+# itertools - 파이썬에서 반복되는 형태의 데이터를 처리하는 기능 제공 - 순열, 조합 라이브러리 제공
+
+from itertools import permutations  # 순열
+
+data = ['A', 'B', 'C']
+result = list(permutations(data, 3))
+print("===========")
+print(result)
+
+from itertools import combinations  # 조합
+
+result = list(combinations(data, 2))
+print("===========")
+print(result)
+
+from itertools import product
+result = list(product(data, repeat=3))  # 중복 허용 순열 (2개를 뽑는)
+print("===========")
+print(result)
+
+from itertools import combinations_with_replacement
+result = list(combinations_with_replacement(data, 2))  # 중복 허용 조합
+print("===========")
+print(result)
