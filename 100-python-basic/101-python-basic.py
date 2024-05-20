@@ -294,7 +294,6 @@ print(data.pop())
 from collections import Counter
 
 counter = Counter(['red', 'red', 'blue'])
-print("===========")
 print(counter)
 print(counter['red'])
 
