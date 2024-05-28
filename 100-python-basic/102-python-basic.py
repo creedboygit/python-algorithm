@@ -46,3 +46,7 @@ print(type(timestamp))
 dt = datetime.datetime.strptime(timestamp, "%Y%m%d-%H%M%S")
 print(f"dt: {dt}")
 print(type(dt))
+
+# timedelta - days, seconds, microseconds, milliseconds, minutes, hours, weeks
+yesterdaydt = datetime.datetime.now() - datetime.timedelta(days=1)
+print(yesterdaydt)
