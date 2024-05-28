@@ -32,3 +32,17 @@ print(f)
 
 g = '여기는 {} {} {} 입니다'.format('대한민국', '서울시', '강남구')
 print(g)
+
+# 날짜 시간 클래스 라이브러리
+import datetime
+print("===========")
+print(datetime.datetime.now())
+print(datetime.datetime.today())
+
+timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+print(timestamp)
+print(type(timestamp))
+
+dt = datetime.datetime.strptime(timestamp, "%Y%m%d-%H%M%S")
+print(f"dt: {dt}")
+print(type(dt))
