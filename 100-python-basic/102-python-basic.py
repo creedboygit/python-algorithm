@@ -33,6 +33,20 @@ print(f)
 g = '여기는 {} {} {} 입니다'.format('대한민국', '서울시', '강남구')
 print(g)
 
+# format 함수처럼 string 자료형 클래스의 멤버함수들이 있습니다.
+# .format()
+# .count()
+# .find()
+# .upper()
+# .lower()
+# .replace()
+# .split()
+# .isspace()
+
+print('count: ', g.count('기'))
+print(g.find('대한민국'))
+print(g.replace('대한민국', '미국'))
+
 # 날짜 시간 클래스 라이브러리
 import datetime
 print("===========")
@@ -50,3 +64,17 @@ print(type(dt))
 # timedelta - days, seconds, microseconds, milliseconds, minutes, hours, weeks......
 yesterdaydt = datetime.datetime.now() - datetime.timedelta(days=1)
 print(yesterdaydt)
+
+list1 = ['김치', 0.23, 101, 'abc', [0, 2, 3]]
+print("===========")
+print(list1)
+
+# append(): 리스트의 끝에 추가
+# insert(): 특정 index 에 추가
+# extend(): 리스트의 끝에 다른 리스트를 추가
+# index(): 특정 값을 가진 첫번째 요소 의 index 를 반환
+# pop(): 특정 위치의 요소를 삭제
+# remove(): 특정 값을 가진 요소를 삭제
+# clear(): 모든 요소 삭제
+# count(): 특정 값을 가진 요소의 수를 반환
+# sort(): 정렬
