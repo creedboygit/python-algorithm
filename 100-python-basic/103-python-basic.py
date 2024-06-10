@@ -82,3 +82,43 @@ print(array)
 array[1][1] = 5
 print(array)
 # 내부적으로 3개의 리스트가 모두 동일한 객체에 대한 3개의 레퍼런스로 인식되기 때문
+
+# 리스트 관련 메서드
+a = [1, 4, 5, 3, 2]
+
+# 리스트에 원소 삽입
+a.append(2)
+print(a)
+
+# 오름차순 정렬
+a.sort()
+print(a)
+
+# 내림차순 정렬
+a.sort(reverse=True)
+print(a)
+
+# 리스트 원소 뒤집기
+a.reverse()
+print(a)
+
+# 특정 인덱스에 데이터 추가
+a.insert(2, 3)
+print(a)
+
+# 특정 값인 데이터 개수 세기
+print(a.count(3))
+
+# 특정 값 데이터 삭제 (인덱스가 낮은 것 하나)
+a.remove(1)
+print(a)
+
+# 특정한 값을 갖는 원소를 삭제하려면?
+# 시간 복잡도를 고려해서 remove 는 사용하지 않는 것을 추천
+
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = {3, 5}
+
+# remove_set에 포함되지 않는 값만을 저장
+result = [i for i in a if i not in remove_set]
+print(result)
