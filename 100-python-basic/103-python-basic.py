@@ -122,3 +122,57 @@ remove_set = {3, 5}
 # remove_set에 포함되지 않는 값만을 저장
 result = [i for i in a if i not in remove_set]
 print(result)
+
+# 문자열 연산
+a = "hello"
+b = "creed"
+
+print(a * 3)
+
+a = "ABSDF"
+print(a[2:4])
+
+# 튜플
+# 튜플은 한버 선언된 값을 변경할 수 없다.
+# 리스트는 대괄호[]를 이용하지만, 튜플은 소괄호 ()를 이용한다.
+# 그래프 알고리즘을 구현할 때 자주 사용
+# 다익스트라 최단 경로 알고리즘 (우선순위큐 사용)
+# (비용, 노드번호) 형태로 튜플을 묶어서 관리
+
+a = (1, 2, 3, 4)
+# a[2] = 7
+
+# 사전(딕셔너리) 자료형
+# key와 value의 쌍을 데이터로 가지는 자료형
+# 딕셔너리에 특정한 원소가 있는지 검사할 때는 '원소 in 사전' 형태를 사용할 수 있다.
+
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['수박'] = 'Watermelon'
+
+print(data)
+
+if '사과' in data:
+    print("'사과'를 키로 가지는 데이터가 존재합니다.")
+
+if '포도' in data:
+    print("'포도'를 키로 가지는 데이터가 존재합니다.")
+else:
+    print("'포도'를 키로 가지는 데이터가 존재하지 않습니다.")
+
+# 딕셔너리 관련 함수
+# key 데이터만 뽑아서 리스트로 이용할 때는 keys() 함수
+# value 데이터만 뽑아서 리스트로 이용할 때는 values() 함수
+
+# 키 데이터만 담은 리스트
+key_list = data.keys()
+print("===========")
+print(key_list)
+
+value_list = data.values()
+print(value_list)
+
+for key in key_list:
+    print(data[key])
+
