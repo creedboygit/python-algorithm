@@ -176,3 +176,41 @@ print(value_list)
 for key in key_list:
     print(data[key])
 
+# 집합 자료형 (Set)
+# 중복을 허용하지 않는다
+# 순서가 없다
+# 특정한 데이터가 이미 등장한 적이 있는지 여부를 체크할 때 효과적이다.
+
+data = set([1, 1, 2, 3, 4, 3, 4, 5])
+print("===========")
+print(data)
+
+data = {1, 2, 2, 3, 3, 4, 5}
+print(data)
+
+# 집합 자료형의 연산
+# 합집합, 교집합, 차집합 연산이 있다.
+a = {1, 2, 3, 4, 5}
+b = {3, 4, 5, 6, 7}
+
+print(a | b)
+print(a & b)
+print(a - b)
+print(b - a)
+
+# 집합 자료형 관련 함수
+data = {1, 2, 3}
+print(data)
+
+# 새로운 원소 추가
+data.add(4)
+print(data)
+
+# 새로운 원소 여러 개 추가
+data.update([4, 5, 6])
+print(data)
+
+# 특정한 값을 갖는 원소 삭제
+data.remove(3)
+print(data)
+
