@@ -220,3 +220,9 @@ print(data)
 
 # x in 리스트 - 리스트 안에 x가 들어가 있을 때 True
 # x not in 문자열 - 문자열 안에 x가 들어가 있지 않을 때 True
+
+score = 70
+if score >= 80:
+    pass
+else:
+    print('성적이 80점 미만입니다.')
