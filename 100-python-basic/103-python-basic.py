@@ -226,3 +226,14 @@ if score >= 80:
     pass
 else:
     print('성적이 80점 미만입니다.')
+
+# 1줄일 경우 줄이기
+if score >= 80:
+    result = "Success"
+else:
+    result = "Fail"
+
+# 3항 연산자
+result = score >= 80 and "Success" or "Fail"
+print("===========")
+print(result)
