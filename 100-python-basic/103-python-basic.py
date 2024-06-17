@@ -237,3 +237,17 @@ else:
 result = score >= 80 and "Success" or "Fail"
 print("===========")
 print(result)
+
+# 리스트에 있는 원소의 값을 변경해서 또 다른 리스트를 만들고자 할 때 매우 간결하게 사용 가능
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = {3, 5}
+
+result = []
+for i in a:
+    if i not in remove_set:
+        result.append(i)
+
+print(result)
+
+result2 = [i for i in a if i not in remove_set]
+print(result2)
