@@ -251,3 +251,44 @@ print(result)
 
 result2 = [i for i in a if i not in remove_set]
 print(result2)
+
+# while문
+i = 1
+result = 0
+
+while i <= 9:
+    result += i
+    i += 1
+print(result)
+
+# for문
+# range (시작값, 끝값 + 1, 증감)
+# continue
+# break
+
+result = 0
+
+for i in range(1, 10):
+    result += 1
+    # print(result)
+print(result)
+
+scores = [90, 85, 77, 65, 98]
+cheating_list = {2, 4}
+
+for i in range(5):
+    if i + 1 in cheating_list:
+        continue
+    if scores[i] >= 80:
+        print(i + 1, '번 학생은 합격입니다.')
+
+# 이중 for문
+# 플로이드 워셜 알고리즘
+# 다이나믹 프로그래밍
+
+# 구구단
+print("===========")
+for i in range(2, 10):
+    for j in range(1, 10):
+        print(i, "X", j, "=", i * j)
+    print()
