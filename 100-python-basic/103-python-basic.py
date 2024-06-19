@@ -292,3 +292,37 @@ for i in range(2, 10):
     for j in range(1, 10):
         print(i, "X", j, "=", i * j)
     print()
+
+
+# 함수
+# 동일한 알고리즘을 반복적으로 수행해야 할 때 사용
+# 매개변수나 return은 존재하지 않을 수도 있다.
+
+
+def add(a, b):
+    return a + b
+
+
+print(add(3, 7))
+
+
+def add(a, b):
+    print("함수의 결과:", a + b)
+
+
+add(b=3, a=9)
+
+# global
+# 함수 안에서 함수 밖의 변수 데이터를 변경해야 하는 경우
+
+a = 0
+
+def func():
+    global a
+    a += 1
+
+for i in range(10):
+    func()
+
+print(a)
+
