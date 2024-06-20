@@ -326,3 +326,14 @@ for i in range(10):
 
 print(a)
 
+# 람다 표현식 (Lambda Express)
+# 특정한 기능을 수행하는 함수를 한 줄에 작성할 수 있다.
+# 람다식은 파이썬의 정렬 라이브러리를 사용할 때, 정렬 기준(Key)를 설정할 때에도 자주 사용된다.
+
+def add(a, b):
+    return a + b
+
+print(add(3, 7))
+
+# 람다 표현식으로 구현한 add() 메서드
+print((lambda a, b: a + b)(3, 7))
