@@ -337,3 +337,29 @@ print(add(3, 7))
 
 # 람다 표현식으로 구현한 add() 메서드
 print((lambda a, b: a + b)(3, 7))
+
+# 입출력
+# 입력
+# map() : 해당 리스트의 모든 원소에 int() 함수를 적용한다.
+# sys.stdin.readline()
+# 입력을 최대한 빠르게 받아야 하는 경우
+# readline()으로 입력하면 입력 후 엔터가 줄 바꿈 기호로 인식, 공백 문자를 제거하려면 rstrip() 함수를 사용해야 함
+
+# 데이터의 개수 입력
+# n = int(input())
+
+# 각 데이터를 공백으로 구분하여 입력
+# data = list(map(int, input().split()))
+
+# data.sort(reverse=True)
+# print(data)
+
+# 공백을 기준으로 구분하여 적은 수의 데이터 입력
+# n, m, k = map(int, input().split())
+
+# 입력을 최대한 빠르게 받아야 하는 경우
+import sys
+
+# 문자열 입력받기
+data = sys.stdin.readline().rstrip()
+print(data)
