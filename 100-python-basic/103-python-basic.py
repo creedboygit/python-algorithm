@@ -361,5 +361,30 @@ print((lambda a, b: a + b)(3, 7))
 import sys
 
 # 문자열 입력받기
-data = sys.stdin.readline().rstrip()
-print(data)
+# data = sys.stdin.readline().rstrip()
+# print(data)
+
+# 출력
+# print()
+# 기본적으로 출력 이후에 줄바꿈을 수행
+# f-string
+
+# 출력할 변수들
+a = 1
+b = 2
+
+print(a, b)
+
+# 출력 시 오류가 발생하는 소스코드 예시 (자바와 다름 주의)
+
+# 출력할 변수들
+answer = 7
+
+# print("정답은 " + answer + "입니다.") # 오류 남
+
+# 올바른 예
+print("정답은 " + str(answer) + "입니다.")
+print("정답은", str(answer), "입니다.")
+
+answer = 8
+print(f"정답은 {answer}입니다.")
