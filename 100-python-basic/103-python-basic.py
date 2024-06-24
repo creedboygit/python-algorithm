@@ -317,14 +317,17 @@ add(b=3, a=9)
 
 a = 0
 
+
 def func():
     global a
     a += 1
+
 
 for i in range(10):
     func()
 
 print(a)
+
 
 # 람다 표현식 (Lambda Express)
 # 특정한 기능을 수행하는 함수를 한 줄에 작성할 수 있다.
@@ -332,6 +335,7 @@ print(a)
 
 def add(a, b):
     return a + b
+
 
 print(add(3, 7))
 
@@ -407,3 +411,25 @@ print(f"정답은 {answer}입니다.")
 # 6. math
 # 필수적인 수학적 기능을 제공하는 라이브러리
 # 팩토리얼, 제곱급, 최대공약수(GCD), 삼각함수, 파이(pi)
+
+result = [1, 2, 3, 4, 5]
+
+print("===========")
+print(sum(result))  # iterable 객체가 들어왔을 때 (반복 가능한 객체) - 리스트, 딕셔너리, 튜플 자료형
+
+print(min(result))
+print(max(result))
+
+result = eval("(3 + 5) * 7")
+
+print(result)
+
+result = sorted([9, 3, 2, 4, 5, 1])  # 오름차순 정렬
+print(result)
+
+result = sorted([9, 3, 2, 4, 5, 1], reverse=True)  # 기존 객체는 변경되지 않으며 return 값이 존재한다.
+print(result)
+
+result.sort() # void문이다. result가 변경된다.
+
+print(result)
