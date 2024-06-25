@@ -430,6 +430,13 @@ print(result)
 result = sorted([9, 3, 2, 4, 5, 1], reverse=True)  # 기존 객체는 변경되지 않으며 return 값이 존재한다.
 print(result)
 
-result.sort() # void문이다. result가 변경된다.
+result.sort()  # void문이다. result가 변경된다.
 
 print(result)
+
+data = [('김진선', 33), ('이진희', 23), ('마이클', 45)]
+result = sorted(data, key=lambda x: x[1], reverse=True)
+print(result)
+
+data = ["23", "59", "59"]
+print(":".join(data))
