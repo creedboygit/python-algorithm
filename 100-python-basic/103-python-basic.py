@@ -440,3 +440,28 @@ print(result)
 
 data = ["23", "59", "59"]
 print(":".join(data))
+
+# itertools
+# 반복되는 데이터를 처리하는 기능을 포함하고 있는 라이브러리
+# permutations(순열)
+# combinations (조합)
+# product (중복을 허용하는 순열)
+# combinations_with_replacement (중복을 허용하는 모든 조합)
+# 순열 조합 모두 클래스이므로 객체 초기화 이후 리스트 자료형으로 변환하여 사용한다.
+
+from itertools import permutations, combinations, product, combinations_with_replacement
+
+data = ['a', 'b', 'c']  # 데이터 준비
+
+# 리스트에서 3개를 뽑아 나열하는 모든 경우를 출력
+result = list(permutations(data, 3))  # 모든 순열 구하기
+print(result)
+
+result = list(combinations(data, 2))  # 2개를 뽑는 모든 조합 구하기
+print(result)
+
+result = list(product(data, repeat=2))  # 2개를 뽑는 모든 순열 구하기 (중복 허용)
+print(result)
+
+result = list(combinations_with_replacement(data, 2))  # 2개를 뽑는 모든 조합 구하기 (중복 허용)
+print(result)
