@@ -478,6 +478,7 @@ print(result)
 
 import heapq
 
+
 def heapsort(iterable):
     h = []
     result = []
@@ -492,12 +493,14 @@ def heapsort(iterable):
 
     return result
 
+
 result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
 print("===========")
 print(result)
 
 # 부호를 사용하여 최대 힙(max heap)구현
 import heapq
+
 
 def heapsort(iterable):
     h = []
@@ -512,6 +515,7 @@ def heapsort(iterable):
         result.append(-heapq.heappop(h))
 
     return result
+
 
 result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
 print("===========")
