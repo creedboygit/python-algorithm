@@ -465,3 +465,54 @@ print(result)
 
 result = list(combinations_with_replacement(data, 2))  # 2개를 뽑는 모든 조합 구하기 (중복 허용)
 print(result)
+
+# heapq (Min heap)
+# 힙 기능을 위해 heapq 라이브러리를 제공
+# 다익스트라 최단 경로 알고리즘 등에서 우선순위 큐 기능을 구현하고자 할 때 사용
+# PriorityQueue 라이브러리를 사용할 수 있지만 코딩 테스트 환경에서는 heapq가 더 빠르게 동작하므로 heapq를 사용
+# 최소 힙(min heap)으로 구성되어 있으므로 넣었다 빼는 것만으로 O(N log N) 에 오름차순 정렬이 완료된다.
+# heapq.heappush() 삽입
+# heapq.heappop() 꺼냄
+
+# 힙정렬(heap sort)을 heapq로 구현하는 예제
+
+import heapq
+
+def heapsort(iterable):
+    h = []
+    result = []
+
+    # 모든 원소를 차례대로 힙에 삽입
+    for value in iterable:
+        heapq.heappush(h, value)
+
+    # 힙에 삽입된 모든 원소를 차례대로 꺼내어 담기
+    for i in range(len(h)):
+        result.append(heapq.heappop(h))
+
+    return result
+
+result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
+print("===========")
+print(result)
+
+# 부호를 사용하여 최대 힙(max heap)구현
+import heapq
+
+def heapsort(iterable):
+    h = []
+    result = []
+
+    # 모든 원소를 차례대로 힙에 삽입
+    for value in iterable:
+        heapq.heappush(h, -value)
+
+    # 힙에 삽입된 모든 원소를 차례대로 꺼내어 담기
+    for i in range(len(h)):
+        result.append(-heapq.heappop(h))
+
+    return result
+
+result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
+print("===========")
+print(result)
