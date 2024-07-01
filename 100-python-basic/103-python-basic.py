@@ -553,3 +553,26 @@ ic(count_by_range(a, 4, 4))
 
 # 값이 [01, 3] 범위에 있는 데이터 개수 출력
 ic(count_by_range(a, -1, 3))
+
+# collections
+# 유용한 자료구조를 제공하는 표준 라이브러리
+
+# deque
+# 스텍, 큐를 구현할 때 사용하는 라이브러리
+# 가장 앞 원소 추가, 가장 앞 원소 제거에서 O(1)의 시간 복잡도를 가진다.
+# 인덱싱, 슬라이싱 등은 사용할 수 없다
+
+from collections import deque
+
+data = deque([2, 3, 4])
+data.appendleft(1)
+ic(data)
+data.append(5)
+ic(data)
+
+data.pop()
+ic(data)
+data.popleft()
+ic(data)
+
+ic(list(data))
