@@ -537,11 +537,13 @@ x = 4
 ic(bisect_left(a, x))
 ic(bisect_right(a, x))
 
+
 # 정렬된 리스트에서 값이 특정 범위에 속하는 원소의 개수를 구하고자 할 때 사용
 def count_by_range(a, left_value, right_value):
     right_index = bisect_right(a, right_value)
     left_index = bisect_left(a, left_value)
     return right_index - left_index
+
 
 # 리스트 선언
 a = [1, 2, 3, 3, 3, 3, 4, 4, 8, 9]
