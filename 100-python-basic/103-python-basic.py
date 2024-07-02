@@ -576,3 +576,14 @@ data.popleft()
 ic(data)
 
 ic(list(data))
+
+# Counter
+# 등장 횟수를 세는 기능을 제공
+# 리스트와 같은 iterable 객체가 주어졌을 때, 해당 객체 내부의 원소가 몇 번씩 등장했는지를 알려준다.
+# 원소별 등장 횟수를 세는 기능이 필요할 때 짧은 코드로 이를 구현할 수 있다.
+from collections import Counter
+
+counter = Counter(['red', 'blue', 'green', 'blue', 'blue'])
+ic(counter)
+ic(counter['blue'])
+ic(dict(counter))
