@@ -587,3 +587,12 @@ counter = Counter(['red', 'blue', 'green', 'blue', 'blue'])
 ic(counter)
 ic(counter['blue'])
 ic(dict(counter))
+
+# math
+import math
+
+ic(math.factorial(5))  # 5 팩토리얼
+ic(math.sqrt(7))  # 제곱근
+ic(math.gcd(21, 14))  # 최대공약수
+ic(math.pi)  # 파이
+ic(math.e)  # 자연상수
